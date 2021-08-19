@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+     var arr=[7] // This my initial value array
+    
+    for (i=0;i<7;i++){ //lopp is just for at what times i have to make child 
+       let new_arr=[] //initializing a new array
+       let k=arr[0] //first and last element of each child are same 
+       new_arr.push(k)
+       if(arr.length>=2){// when the length of parent array is only greter than 1 
+        // then we create element value 
+        for (j=0;j<arr.length-1;j++){
+            let l=arr[j]+arr[j+1]// go for sum of two comcecutive element of array
+            new_arr.push(l)
+        }
+       }
+       k=arr[0]
+       new_arr.push(k)
+       document.write(arr)
+       document.write("<br/>")
+       arr=new_arr//I am updating main array with new array which i make every interate of for loop
+       console.log(arr)
+       
+    }
+    
+    
+</script>
+</html>
